@@ -12,6 +12,25 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 
+
+//firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+//plugins
+import { GooglePlus } from '@ionic-native/google-plus';
+
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyC_GHu71FpgWJoQeSn75fB8pZ3x7gfxMn4",
+    authDomain: "loginquiniela.firebaseapp.com",
+    databaseURL: "https://loginquiniela.firebaseio.com",
+    projectId: "loginquiniela",
+    storageBucket: "loginquiniela.appspot.com",
+    messagingSenderId: "528085158243"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,7 +42,10 @@ import { LoginPage } from '../pages/login/login';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +59,8 @@ import { LoginPage } from '../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GooglePlus  
   ]
 })
 export class AppModule {}

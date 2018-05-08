@@ -15,23 +15,19 @@
 
         <ion-row>
             <ion-col class="top-5">
-                <button ion-button color="google" icon-left block>
+                <button (click)="signInWithGoogle()" ion-button color="google" icon-left block>
                     <ion-icon name ="logo-google"></ion-icon>
                     Google
                 </button>
 
 
-                <button ion-button color="facebook" icon-left block>
+                <!-- <button (click)="login()" ion-button color="facebook" icon-left block>
                     <ion-icon name ="logo-facebook"></ion-icon>
                     Facebook
-                </button>
+                </button> -->
 
 
             </ion-col>
         </ion-row>
     </ion-grid>
-
-
-
-
 </ion-content>
