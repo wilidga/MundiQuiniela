@@ -1,11 +1,9 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-</ion-content>
+<ion-list>
+    <ion-item *ngFor="let item of Teams">
+        <ion-avatar item-start>
+            <img src={{item.flag}}>
+        </ion-avatar>
+        <h2>{{item.name }}</h2>
+        <p>{{item.fifaCode}}</p>
+    </ion-item>
+</ion-list>

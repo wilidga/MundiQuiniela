@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -22,6 +27,13 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 //plugins
 import { GooglePlus } from '@ionic-native/google-plus';
+import { UserloginProvider } from '../providers/userlogin/userlogin';
+import { PuntajesfinalesProvider } from '../providers/puntajesfinales/puntajesfinales';
+import { InvitaaceptaProvider } from '../providers/invitaacepta/invitaacepta';
+
+//servicios
+import { TeamsProvider } from '../providers/teams/teams';
+import { EquiposProvider } from '../providers/equipos/equipos';
 
 
 export const firebaseConfig = {
@@ -48,7 +60,9 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+      HttpModule,
+      HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,7 +79,13 @@ export const firebaseConfig = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GooglePlus,
-    UsuarioProvider  
+    UsuarioProvider,
+    UserloginProvider,
+    PuntajesfinalesProvider,
+    InvitaaceptaProvider,
+    TeamsProvider,
+    EquiposProvider
+    
   ]
 })
 export class AppModule {}
