@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GooglePlus } from '@ionic-native/google-plus';
-// import firebase from 'firebase';
 
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
+import { UsuarioProvider } from '../../providers/usuario/usuario';
+import { HomePage } from '../home/home';
+
+import { Platform } from 'ionic-angular';
+
+
+import { GooglePlus } from '@ionic-native/google-plus';
+import { AboutPage } from '../about/about';
+import { TabsPage } from '../tabs/tabs';
+
+
 
 @IonicPage()
 @Component({
@@ -17,19 +23,40 @@ import { GooglePlus } from '@ionic-native/google-plus';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private googlePlus: GooglePlus) {
+  constructor(public navCtrl: NavController,
+              private afAuth: AngularFireAuth,
+              public usuarioProv: UsuarioProvider,
+              private googlePlus: GooglePlus,
+              private platform: Platform) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  signInGoogle() {
+
+    // this.googlePlus.login({
+    //   'webClientId': '528085158243-j9vtggcl6siodumeblu9t25jdg82hg3g.apps.googleusercontent.com',
+    //   'offline': true
+    // }).then( res => {
+      
+    //   firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
+    //   .then( user => {
+    //     console.log(JSON.stringify(user));
+  
+    //           this.usuarioProv.cargarUsuario(
+    //             user.displayName,
+    //             user.email,
+    //             user.photoURL,
+    //             user.uid,
+    //             'google'
+    //           );
+      
+    //           this.navCtrl.setRoot(AboutPage);
+    //   })
+    //   .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
+    // }).catch(err => console.error("Error: " + JSON.stringify(err))) ;
+
+    this.navCtrl.setRoot(TabsPage);
   }
 
-  signInWithGoogle() {
-    this.googlePlus.login({
-      'webClientId': '528085158243-d5mm0l0vgo9d5mlc2bk5cjhec28s8kfj.apps.googleusercontent.com',
-      'offline': true
-    }).then( res => console.log(res))
-      .catch(err => console.error(err));
-  }
+
 
 }

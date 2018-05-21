@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "528085158243",
+    "firebase_url": "https://loginquiniela.firebaseio.com",
+    "project_id": "loginquiniela",
+    "storage_bucket": "loginquiniela.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528085158243:android:9b4395a05284e79f",
+        "android_client_info": {
+          "package_name": "com.wilidga.loginquiniela"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528085158243-pa9mj8keigsdimji56u0fri2o999g4o7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wilidga.loginquiniela",
+            "certificate_hash": "ab1bd934eeca8f957b7eca51ca3891eb8a39e08e"
+          }
+        },
+        {
+          "client_id": "528085158243-j9vtggcl6siodumeblu9t25jdg82hg3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9xHHv3XqBCk9MBsVLsoY8Fz9F41jyYQs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528085158243-j9vtggcl6siodumeblu9t25jdg82hg3g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528085158243-d5mm0l0vgo9d5mlc2bk5cjhec28s8kfj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wilidga.loginquiniela"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
