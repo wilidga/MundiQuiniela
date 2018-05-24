@@ -30530,6 +30530,79 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.scrollable {
+  height: 100%;
+}
+
+.list-avatar-page ion-note {
+  font-size: 12px;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
+page-contact ion-content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b577b+0,341a4a+100 */
+  background: #0b577b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0b577b 0%, #341a4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+page-contact h3 {
+  color: white;
+}
+
+page-contact .top-20 {
+  margin-top: 20%;
+}
+
+page-contact .top-20 {
+  margin-top: 5%;
+}
+
+page-create-team ion-content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b577b+0,341a4a+100 */
+  background: #0b577b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0b577b 0%, #341a4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+page-home ion-content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b577b+0,341a4a+100 */
+  background: #0b577b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0b577b 0%, #341a4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+page-home img {
+  width: 150px;
+}
+
+page-home h3 {
+  color: white;
+}
+
+page-home .top-20 {
+  margin-top: 20%;
+}
+
+page-home .top-20 {
+  margin-top: 5%;
+}
+
 page-login ion-content {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b577b+0,341a4a+100 */
   background: #0b577b;

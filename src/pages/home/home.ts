@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { CreateTeamPage } from '../create-team/create-team';
 
 
 @Component({
@@ -9,8 +10,13 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
 
+  }
+  openCreateTeam(){
+
+    let modal = this.modalCtrl.create(CreateTeamPage);
+    modal.present();
   }
 
 }

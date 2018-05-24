@@ -1,9 +1,22 @@
-<ion-list>
-    <ion-item *ngFor="let item of Teams">
-        <ion-avatar item-start>
-            <img src={{item.flag}}>
-        </ion-avatar>
-        <h2>{{item.name }}</h2>
-        <p>{{item.fifaCode}}</p>
-    </ion-item>
-</ion-list>
+<ion-content>
+    <ion-header>
+        <ion-navbar>
+            <ion-title>
+                Teams
+
+            </ion-title>
+        </ion-navbar>
+    </ion-header>
+
+    <ion-scroll scrollY="true" class="scrollable">
+        <ion-list>
+            <ion-item *ngFor="let item of Teams">
+                <ion-avatar item-start>
+                    <img src={{item.flag}}>
+                </ion-avatar>
+                <h2>{{item.name }}</h2>
+                <p>{{item.fifaCode}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-scroll>
+</ion-content>

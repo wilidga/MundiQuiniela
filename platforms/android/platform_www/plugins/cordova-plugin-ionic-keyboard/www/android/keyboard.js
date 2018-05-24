@@ -29,12 +29,12 @@ Keyboard.fireOnShowing = function (height) {
     });
 };
 
-Keyboard.hideKeyboardAccessoryBar = function (hide) {
+Keyboard.hideFormAccessoryBar = Keyboard.hideKeyboardAccessoryBar = function (hide) {
     exec(null, null, "Keyboard", "hideKeyboardAccessoryBar", [hide]);
 };
 
-Keyboard.close = function () {
-    exec(null, null, "Keyboard", "close", []);
+Keyboard.hide = function () {
+    exec(null, null, "Keyboard", "hide", []);
 };
 
 Keyboard.show = function () {
@@ -66,4 +66,5 @@ channel.onCordovaReady.subscribe(function () {
 Keyboard.isVisible = false;
 
 module.exports = Keyboard;
+
 });

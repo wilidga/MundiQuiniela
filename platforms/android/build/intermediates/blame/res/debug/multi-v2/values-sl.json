@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Developer/UMG/MundiQuiniela/platforms/android/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
+            "outputFile": "C:\\Users\\wdleon\\Documents\\UMG\\MundiQuiniela\\platforms\\android\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sl\\values-sl.xml",
             "map": [
                 {
-                    "source": "/Users/wilidga/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/689f0bef92cb9c459bfd6cf0bd5f45e8/res/values-sl/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "283",
-                        "endColumns": "198",
-                        "endOffsets": "481"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1265",
-                        "endColumns": "198",
-                        "endOffsets": "1459"
-                    }
-                },
-                {
-                    "source": "/Users/wilidga/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/f4628816f857014a942e901a8787f478/res/values-sl/values.xml",
+                    "source": "C:\\Users\\wdleon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\8a43275a55cbe8970fc9bbc9738fcd4a\\res\\values-sl\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -35,6 +18,23 @@
                         "startOffsets": "105,213,410,541,650,856,988,1132,1464,1681,1790,1988,2120,2331,2513,2613,2705",
                         "endColumns": "107,196,130,108,205,131,143,132,216,108,197,131,210,181,99,91,112",
                         "endOffsets": "208,405,536,645,851,983,1127,1260,1676,1785,1983,2115,2326,2508,2608,2700,2813"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wdleon\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\694266bbacff010586b0d225e3aaa0e4\\res\\values-sl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "283",
+                        "endColumns": "198",
+                        "endOffsets": "481"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1265",
+                        "endColumns": "198",
+                        "endOffsets": "1459"
                     }
                 }
             ]

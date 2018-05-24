@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Crear Liga</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form>
+        <ion-list>
+
+            <ion-item>
+                <ion-label floating>Nombre de Liga</ion-label>
+                <ion-input type="text" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Liga por diversión</ion-label>
+                <ion-checkbox (ionChange)="updateToDo($event)"></ion-checkbox>
+
+            </ion-item>
+
+            <ion-item>
+                <ion-label>liga de pago</ion-label>
+                <ion-checkbox (ionChange)="updateToDoOne($event)" checked={{!ocultar1}}></ion-checkbox>
+            </ion-item>
+            <ion-item *ngIf="ocultar2">
+                <ion-label floating>Valor de Liga</ion-label>
+                <ion-input type="number" required></ion-input>
+            </ion-item>
+
+            <button ion-button block>Guardar</button>
+
+
+        </ion-list>
+    </form>
+
+</ion-content>

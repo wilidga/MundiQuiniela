@@ -13,12 +13,14 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
+//pages
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { UserPage } from '../pages/user/user';
-
+import { CreateTeamPage } from '../pages/create-team/create-team';
 
 //firebase
 import { AngularFireModule } from 'angularfire2';
@@ -34,6 +36,8 @@ import { InvitaaceptaProvider } from '../providers/invitaacepta/invitaacepta';
 //servicios
 import { TeamsProvider } from '../providers/teams/teams';
 import { EquiposProvider } from '../providers/equipos/equipos';
+import { StadiumsProvider } from '../providers/stadiums/stadiums';
+
 
 
 export const firebaseConfig = {
@@ -53,7 +57,8 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     LoginPage,
-    UserPage
+    UserPage,
+    CreateTeamPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +77,8 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     LoginPage,
-    UserPage
+    UserPage,
+    CreateTeamPage
   ],
   providers: [
     StatusBar,
@@ -84,7 +90,8 @@ export const firebaseConfig = {
     PuntajesfinalesProvider,
     InvitaaceptaProvider,
     TeamsProvider,
-    EquiposProvider
+    EquiposProvider,
+    StadiumsProvider
     
   ]
 })

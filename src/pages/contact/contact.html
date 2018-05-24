@@ -1,17 +1,22 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+    <ion-header>
+        <ion-navbar>
+            <ion-title>
+                Stadiums
+            </ion-title>
+        </ion-navbar>
+    </ion-header>
+    <ion-scroll scrollY="true" class="scrollable">
+        <ion-card *ngFor="let item of Stadiums">
+            <img src={{item.image}} />
+            <ion-card-content>
+                <ion-card-title>
+                    Name: {{item.name}}
+                </ion-card-title>
+                <p>
+                    City: {{item.city}}
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </ion-scroll>
 </ion-content>
