@@ -29,6 +29,28 @@ export class LoginPage {
               private platform: Platform) {
   }
   signInGoogle() { 
-    this.navCtrl.setRoot(TabsPage);
+    this.googlePlus.login({
+        'webClientId': '528085158243-j9vtggcl6siodumeblu9t25jdg82hg3g.apps.googleusercontent.com',
+        'offline': true
+      }).then( res => {
+        
+        firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
+        .then( user => {
+          console.log(JSON.stringify(user));
+    
+                this.usuarioProv.cargarUsuario(
+                  user.displayName,
+                  user.email,
+                  user.photoURL,
+                  user.uid,
+                  'google'
+                );
+        
+                this.navCtrl.setRoot(TabsPage);
+        })
+        .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
+      }).catch(err => console.error("Error: " + JSON.stringify(err))) ;
+  
+    // this.navCtrl.setRoot(TabsPage);
   }
 }

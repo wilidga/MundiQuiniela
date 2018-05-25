@@ -30614,6 +30614,10 @@ page-login ion-content {
   /* IE6-9 fallback on horizontal gradient */
 }
 
+page-login ion-item {
+  background-color: black;
+}
+
 page-login img {
   width: 150px;
 }
@@ -30627,5 +30631,55 @@ page-login .top-20 {
 }
 
 page-login .top-20 {
+  margin-top: 5%;
+}
+
+page-login .item-content {
+  background-color: black;
+}
+
+page-score ion-content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b577b+0,341a4a+100 */
+  background: #0b577b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0b577b 0%, #341a4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+page-score h3 {
+  color: white;
+}
+
+page-score .top-20 {
+  margin-top: 20%;
+}
+
+page-score .top-20 {
+  margin-top: 5%;
+}
+
+page-vaticinio ion-content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b577b+0,341a4a+100 */
+  background: #0b577b;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #0b577b 0%, #341a4a 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+page-vaticinio h3 {
+  color: white;
+}
+
+page-vaticinio .top-20 {
+  margin-top: 20%;
+}
+
+page-vaticinio .top-20 {
   margin-top: 5%;
 }

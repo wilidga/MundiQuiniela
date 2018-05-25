@@ -15,16 +15,24 @@
                     {{item.Nombre}}
                 </ion-item>
                 <ion-item-options side="right">
-                    <button (click)="setScore()" ion-button color="primary">
+                    <button (click)="setScore(item.Nombre)" ion-button color="primary">
                   <ion-icon name="text"></ion-icon>
                   Set Score
                 </button>
+                    <button (click)="getVaticinio(item.Nombre)" ion-button color="primary">
+                        <ion-icon name="text"></ion-icon>
+                        Vaticinio
+                      </button>
                 </ion-item-options>
                 <ion-item-options side="left">
                     <button (click)="regularShare(item.Nombre)" color="primary">
                   <ion-icon name="md-share"></ion-icon>
                   Sharing
                 </button>
+                    <button *ngIf="item.snPago" (click)="Pagos(item.Nombre)" ion-button color="primary">
+                        <ion-icon name="ios-card"> </ion-icon>
+                        Pagos
+                      </button>
                 </ion-item-options>
             </ion-item-sliding>
         </ion-list>

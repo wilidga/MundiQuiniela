@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { GroupsProvider } from '../../providers/groups/groups';
 import { Score } from '../../app/interface/score.interface';
 import { PuntajesfinalesProvider } from '../../providers/puntajesfinales/puntajesfinales';
@@ -22,21 +22,32 @@ export class ScorePage implements OnInit {
   Gruposf:any[]=[]
   Gruposg:any[]=[]
   Gruposh:any[]=[]
+  myParam: string;
+
 
   public GolHome:number;
   public GolAway:number;
   
   score:Score={
+    liga:"",
+    grupo:"",
     home_team:"",
     valueHome:0,
     away_team:"",
-    valueAway:0 
+    valueAway:0 ,
+    urlaway:"",
+    urlhome:""
 
 
   }
 
   
-  constructor(public navCtrl: NavController, public navParams: NavParams , public _grupos:GroupsProvider, private _puntaje:PuntajesfinalesProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public _grupos:GroupsProvider,
+     private _puntaje:PuntajesfinalesProvider,public viewCtrl: ViewController,
+    params: NavParams) {
+      this.myParam = params.get('myParam');
+      console.log(this.myParam);
+    
   }
 
   ionViewDidLoad() {    
@@ -96,17 +107,24 @@ export class ScorePage implements OnInit {
         
     }
 
-    guardar(grupo:string , a: string, b:number, c:string,d:number){
-      console.log(grupo + " " + a + " " + b + " " + c + " "+ d);
+    guardar(grupo:string , a: string, b:number, c:string,d:number,urlhome:string,urlaway:string){
+      console.log(this.myParam + " " + grupo + " " + a + " " + b + " " + c + " "+ d);
+      this.score.liga=this.myParam;
+      this.score.grupo=grupo;
       this.score.home_team=a;
       this.score.valueHome=b;
       this.score.away_team=c;
       this.score.valueAway=d;
+      this.score.urlhome=urlhome;
+      this.score.urlaway =urlaway;
       this._puntaje.saveScores(this.score)
       .subscribe( data =>{
         console.log(data);
       })
       
+    }
+    dismiss() {
+      this.viewCtrl.dismiss();
     }
 
  }

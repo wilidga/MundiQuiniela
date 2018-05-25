@@ -1,0 +1,22 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>InvitaPendientes</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor="let item of invita">
+            <ion-avatar item-start>
+
+            </ion-avatar>
+            <h2>Email: {{item.Email}}</h2>
+            <p>Liga: {{item.Liga}}</p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

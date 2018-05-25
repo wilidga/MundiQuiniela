@@ -29,7 +29,7 @@ export class PuntajesfinalesProvider {
 
   }
 
-getLigas(){
+getPuntajes(){
   return this.http.get(this.LigaUrl)
   .map(res=>  {
     return res; 

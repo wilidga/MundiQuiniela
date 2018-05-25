@@ -1,6 +1,9 @@
 <ion-header padding text-center>
 
     <ion-navbar>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()" color="secondary" clear>Close</button>
+        </ion-buttons>
         <ion-title>Score</ion-title>
     </ion-navbar>
 
@@ -52,7 +55,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                 <ion-icon ></ion-icon>
                 Guardar
             </button>
@@ -103,7 +106,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>
@@ -153,7 +156,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>
@@ -203,7 +206,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>
@@ -253,7 +256,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>
@@ -303,7 +306,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>
@@ -354,7 +357,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>
@@ -402,7 +405,7 @@
                 <BR> Estadio: {{getNameStadiums(item.stadium)}}
             </p>
         </ion-card-content>
-        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value,getImgTeam(item.home_team),getImgTeam(item.away_team))" ion-button color="default" icon-left block>
                         <ion-icon ></ion-icon>
                         Guardar
                     </button>

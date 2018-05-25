@@ -42,6 +42,10 @@ import { LigasProvider } from '../providers/ligas/ligas';
 import { SharingProvider } from '../providers/sharing/sharing';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { GroupsProvider } from '../providers/groups/groups';
+import { VaticinioPage } from '../pages/vaticinio/vaticinio';
+import { PagosPage } from '../pages/pagos/pagos';
+import { PagoTarjetaProvider } from '../providers/pago-tarjeta/pago-tarjeta';
+import { InvitaPendientesPage } from '../pages/invita-pendientes/invita-pendientes';
 
 
 
@@ -65,7 +69,10 @@ export const firebaseConfig = {
     LoginPage,
     UserPage,
     CreateTeamPage,
-    ScorePage
+    ScorePage,
+    VaticinioPage,
+    PagosPage,
+    InvitaPendientesPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +94,10 @@ export const firebaseConfig = {
     LoginPage,
     UserPage,
     CreateTeamPage,
-    ScorePage
+    ScorePage,
+    VaticinioPage,
+    PagosPage,
+    InvitaPendientesPage
   ],
   providers: [
     StatusBar,
@@ -104,7 +114,8 @@ export const firebaseConfig = {
     LigasProvider,
     SharingProvider,
     SocialSharing,
-    GroupsProvider
+    GroupsProvider,
+    PagoTarjetaProvider
     
   ]
 })

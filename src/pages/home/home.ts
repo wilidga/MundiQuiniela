@@ -6,6 +6,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { Credenciales, UsuarioProvider } from '../../providers/usuario/usuario';
 import { SharingProvider } from '../../providers/sharing/sharing';
 import { ScorePage } from '../score/score';
+import { PagosPage } from '../pagos/pagos';
+import { VaticinioPage } from '../vaticinio/vaticinio';
 
 
 @Component({
@@ -17,6 +19,7 @@ export class HomePage {
   Ligas:any[]=[]
   invita:any[]=[]
   user: Credenciales = {};
+  myParam: string = '';
 
   constructor(public navCtrl: NavController,public modalCtrl: ModalController, private _Liga:LigasProvider,
     private socialSharing: SocialSharing,  public usuarioProv: UsuarioProvider, private _EnviaInvita:SharingProvider ) {
@@ -44,10 +47,23 @@ export class HomePage {
       }
     
 
-      setScore(){
+      setScore(param:string){
+        this.myParam = param;
+        this.navCtrl.push(ScorePage, { 'myParam': this.myParam });
+      }
+      
+
+      Pagos(param:string){
+        
+        this.myParam = param;
+        this.navCtrl.push(PagosPage, { 'myParam': this.myParam });
+        
+      }
+      
+      getVaticinio(param:string ){
     
-        let modal = this.modalCtrl.create(ScorePage);
-        modal.present();
+        this.myParam = param;
+        this.navCtrl.push(VaticinioPage, { 'myParam': this.myParam });
       }
       
 
