@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { CreateTeamPage } from '../create-team/create-team';
+import { LigasProvider } from '../../providers/ligas/ligas';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { Credenciales, UsuarioProvider } from '../../providers/usuario/usuario';
+import { SharingProvider } from '../../providers/sharing/sharing';
+import { ScorePage } from '../score/score';
 
 
 @Component({
@@ -9,14 +14,63 @@ import { CreateTeamPage } from '../create-team/create-team';
 })
 export class HomePage {
 
+  Ligas:any[]=[]
+  invita:any[]=[]
+  user: Credenciales = {};
 
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController, private _Liga:LigasProvider,
+    private socialSharing: SocialSharing,  public usuarioProv: UsuarioProvider, private _EnviaInvita:SharingProvider ) {
 
-  }
-  openCreateTeam(){
+      this.user = this.usuarioProv.usuario;
 
-    let modal = this.modalCtrl.create(CreateTeamPage);
-    modal.present();
-  }
+           this._Liga.getLigas()
+            .subscribe( data =>{
+              
+              for(let key$ in data){
+                
+                this.Ligas.push(data[key$]);
+              }
+              console.log(this.Ligas);
+      
+      
+            }) 
+    
 
+        }
+      openCreateTeam(){
+    
+        let modal = this.modalCtrl.create(CreateTeamPage);
+        modal.present();
+      }
+    
+
+      setScore(){
+    
+        let modal = this.modalCtrl.create(ScorePage);
+        modal.present();
+      }
+      
+
+      regularShare(prueba:string){
+
+        var msg = "Unete a mi Liga en MundiQuiniela";
+  
+        this.invita.push( this.user.email);
+        this.invita.push(prueba);
+        this.invita.push(msg);        
+
+        console.log(prueba);
+        console.log(msg);
+        console.log(this.invita);
+
+        this._EnviaInvita.nuevaInvitacion(this.invita)
+             .subscribe(data=>{
+          
+          })
+
+          // this.socialSharing.share(msg, "MundiQuiniela", null, null);
+      }
+    
 }
+
+

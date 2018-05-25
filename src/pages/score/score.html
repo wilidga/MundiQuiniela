@@ -1,0 +1,413 @@
+<ion-header padding text-center>
+
+    <ion-navbar>
+        <ion-title>Score</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+        <ion-item padding text-center>
+
+            <ion-input #Grupo type="text" value="GRUPO A" enabled="false"></ion-input>
+        </ion-item>
+    </ion-card>
+
+    <ion-card *ngFor="let item of Gruposa">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(Grupo.value, getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                <ion-icon ></ion-icon>
+                Guardar
+            </button>
+
+    </ion-card>
+
+
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO B
+        </ion-item>
+    </ion-card>
+
+
+    <ion-card *ngFor="let item of Gruposb">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO C
+        </ion-item>
+    </ion-card>
+
+
+    <ion-card *ngFor="let item of Gruposc">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO D
+        </ion-item>
+    </ion-card>
+
+
+    <ion-card *ngFor="let item of Gruposd">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO E
+        </ion-item>
+    </ion-card>
+
+
+    <ion-card *ngFor="let item of Grupose">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO F
+        </ion-item>
+    </ion-card>
+
+
+    <ion-card *ngFor="let item of Gruposf">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+
+
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO G
+        </ion-item>
+    </ion-card>
+
+
+    <ion-card *ngFor="let item of Gruposg">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+    <ion-card>
+        <ion-item padding text-center>
+            GRUPO H
+        </ion-item>
+    </ion-card>
+
+    <ion-card *ngFor="let item of Gruposh">
+
+        <ion-card-content>
+            <ion-card-title>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.home_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.home_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolHome type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar item-start>
+                            <img src={{getImgTeam(item.away_team)}}/>
+                        </ion-avatar>
+                        <h2> Home team: {{ getNameTeam(item.away_team) }}</h2>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Goles</ion-label>
+                        <ion-input #GolAway type="number"></ion-input>
+                    </ion-item>
+                </ion-list>
+
+            </ion-card-title>
+            <p>
+                Date: {{item.date}}
+                <BR> Estadio: {{getNameStadiums(item.stadium)}}
+            </p>
+        </ion-card-content>
+        <button (click)="guardar(getNameTeam(item.home_team),GolHome.value, getNameTeam(item.away_team),GolAway.value)" ion-button color="default" icon-left block>
+                        <ion-icon ></ion-icon>
+                        Guardar
+                    </button>
+
+    </ion-card>
+
+
+</ion-content>

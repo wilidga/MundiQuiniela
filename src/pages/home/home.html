@@ -10,14 +10,20 @@
     <ion-content padding>
 
         <ion-list>
-            <ion-item-sliding>
+            <ion-item-sliding *ngFor="let item of Ligas">
                 <ion-item>
-                    <h2>Liga 1</h2>
+                    {{item.Nombre}}
                 </ion-item>
                 <ion-item-options side="right">
-                    <button ion-button color="primary">
+                    <button (click)="setScore()" ion-button color="primary">
                   <ion-icon name="text"></ion-icon>
                   Set Score
+                </button>
+                </ion-item-options>
+                <ion-item-options side="left">
+                    <button (click)="regularShare(item.Nombre)" color="primary">
+                  <ion-icon name="md-share"></ion-icon>
+                  Sharing
                 </button>
                 </ion-item-options>
             </ion-item-sliding>

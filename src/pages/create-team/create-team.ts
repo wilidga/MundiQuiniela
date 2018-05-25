@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { Liga } from '../../app/interface/liga.interface';
+import { FromEventPatternObservable } from 'rxjs/observable/FromEventPatternObservable';
+import { LigasProvider } from '../../providers/ligas/ligas';
 
 
 
@@ -11,7 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class CreateTeamPage {
   ocultar1: boolean  = false;
   ocultar2: boolean  = false;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  Liga:Liga={
+    Nombre:"",
+    snDiversion:false,
+    snPago:false,
+    ValorPago:0
+
+  }
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _Liga:LigasProvider) {
   }
 
   ionViewDidLoad() {
@@ -31,8 +45,16 @@ export class CreateTeamPage {
 
   }
  
+   closeModal(){
+     this.navCtrl.setRoot(TabsPage);
+  }
 
-
-
-
+    guardar(){
+      console.log(this.Liga);
+      this._Liga.nuevaLiga(this.Liga)
+        .subscribe(data=>{
+          
+        })
+    }
+    
 }

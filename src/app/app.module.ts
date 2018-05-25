@@ -21,6 +21,7 @@ import { LoginPage } from '../pages/login/login';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { UserPage } from '../pages/user/user';
 import { CreateTeamPage } from '../pages/create-team/create-team';
+import { ScorePage } from '../pages/score/score';
 
 //firebase
 import { AngularFireModule } from 'angularfire2';
@@ -37,6 +38,11 @@ import { InvitaaceptaProvider } from '../providers/invitaacepta/invitaacepta';
 import { TeamsProvider } from '../providers/teams/teams';
 import { EquiposProvider } from '../providers/equipos/equipos';
 import { StadiumsProvider } from '../providers/stadiums/stadiums';
+import { LigasProvider } from '../providers/ligas/ligas';
+import { SharingProvider } from '../providers/sharing/sharing';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { GroupsProvider } from '../providers/groups/groups';
+
 
 
 
@@ -58,7 +64,8 @@ export const firebaseConfig = {
     TabsPage,
     LoginPage,
     UserPage,
-    CreateTeamPage
+    CreateTeamPage,
+    ScorePage
   ],
   imports: [
     BrowserModule,
@@ -68,6 +75,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
       HttpModule,
       HttpClientModule
+      
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -78,7 +86,8 @@ export const firebaseConfig = {
     TabsPage,
     LoginPage,
     UserPage,
-    CreateTeamPage
+    CreateTeamPage,
+    ScorePage
   ],
   providers: [
     StatusBar,
@@ -91,7 +100,11 @@ export const firebaseConfig = {
     InvitaaceptaProvider,
     TeamsProvider,
     EquiposProvider,
-    StadiumsProvider
+    StadiumsProvider,
+    LigasProvider,
+    SharingProvider,
+    SocialSharing,
+    GroupsProvider
     
   ]
 })

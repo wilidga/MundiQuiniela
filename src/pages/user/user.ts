@@ -18,7 +18,7 @@ export class UserPage {
               private afAuth: AngularFireAuth,
               public usuarioProv: UsuarioProvider) { 
 
-      console.log( this.usuarioProv.usuario );
+     
 
       this.user = this.usuarioProv.usuario;
 

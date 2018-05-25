@@ -8,30 +8,40 @@
 
 
 <ion-content padding>
-    <form>
+    <form (ngSubmit)="guardar()" #forma="ngForm">
         <ion-list>
 
             <ion-item>
                 <ion-label floating>Nombre de Liga</ion-label>
-                <ion-input type="text" required></ion-input>
+                <ion-input [(ngModel)]="Liga.Nombre" name="Nombre" type="text" required></ion-input>
             </ion-item>
 
             <ion-item>
                 <ion-label>Liga por diversión</ion-label>
-                <ion-checkbox (ionChange)="updateToDo($event)"></ion-checkbox>
+                <ion-checkbox (ionChange)="updateToDo($event)" [(ngModel)]="Liga.snDiversion" name="snDiversion"></ion-checkbox>
 
             </ion-item>
 
             <ion-item>
                 <ion-label>liga de pago</ion-label>
-                <ion-checkbox (ionChange)="updateToDoOne($event)" checked={{!ocultar1}}></ion-checkbox>
+                <ion-checkbox (ionChange)="updateToDoOne($event)" checked={{!ocultar1}} [(ngModel)]="Liga.snPago" name="snPago"></ion-checkbox>
             </ion-item>
             <ion-item *ngIf="ocultar2">
                 <ion-label floating>Valor de Liga</ion-label>
-                <ion-input type="number" required></ion-input>
+                <ion-input [(ngModel)]="Liga.ValorPago" name="ValorPago" type="number"></ion-input>
             </ion-item>
 
-            <button ion-button block>Guardar</button>
+
+            <button [disabled]="!forma.valid" type="submit" ion-button color="default" icon-left block>
+                <ion-icon ></ion-icon>
+                Guardar
+            </button>
+
+
+            <button (click)="closeModal()" ion-button color="google" icon-left block>
+                <ion-icon ></ion-icon>
+                Cancelar
+            </button>
 
 
         </ion-list>
